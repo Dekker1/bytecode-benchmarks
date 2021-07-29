@@ -1,0 +1,58 @@
+## start of ocaml dump of "tak.cmo"
+       0  BRANCH 37
+       2  RESTART
+       3  GRAB 2
+       5  ACC0
+       6  PUSHACC2
+       7  LTINT
+       8  BRANCHIFNOT 34
+      10  ACC1
+      11  PUSHACC1
+      12  PUSHACC4
+      13  OFFSETINT -1
+      15  PUSHOFFSETCLOSURE0
+      16  APPLY3
+      17  PUSHACC1
+      18  PUSHACC4
+      19  PUSHACC4
+      20  OFFSETINT -1
+      22  PUSHOFFSETCLOSURE0
+      23  APPLY3
+      24  PUSHACC4
+      25  PUSHACC4
+      26  PUSHACC4
+      27  OFFSETINT -1
+      29  PUSHOFFSETCLOSURE0
+      30  APPLY3
+      31  PUSHOFFSETCLOSURE0
+      32  APPTERM3 6
+      34  ACC2
+      35  RETURN 3
+      37  CLOSUREREC 0, 3
+      41  CONST1
+      42  PUSHCONSTINT 1000
+      44  PUSH
+      45  PUSHACC2
+      46  GTINT
+      47  BRANCHIF 69
+      49  CHECK_SIGNALS
+      50  CONSTINT 6
+      52  PUSHCONSTINT 12
+      54  PUSHCONSTINT 18
+      56  PUSHACC5
+      57  APPLY3
+      58  CONST0
+      59  ACC1
+      60  PUSH
+      61  OFFSETINT 1
+      63  ASSIGN 2
+      65  ACC1
+      66  NEQ
+      67  BRANCHIF 49
+      69  CONST0
+      70  POP 2
+      72  ACC0
+      73  MAKEBLOCK1 0
+      75  POP 1
+      77  SETGLOBAL Tak
+## end of ocaml dump of "tak.cmo"

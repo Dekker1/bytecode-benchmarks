@@ -1,0 +1,42 @@
+## start of ocaml dump of "fib.cmo"
+       0  BRANCH 22
+       2  ACC0
+       3  BLTINT 1, 9
+       6  ACC0
+       7  RETURN 1
+       9  ACC0
+      10  OFFSETINT -2
+      12  PUSHOFFSETCLOSURE0
+      13  APPLY1
+      14  PUSHACC1
+      15  OFFSETINT -1
+      17  PUSHOFFSETCLOSURE0
+      18  APPLY1
+      19  ADDINT
+      20  RETURN 1
+      22  CLOSUREREC 0, 2
+      26  CONST1
+      27  PUSHCONSTINT 100
+      29  PUSH
+      30  PUSHACC2
+      31  GTINT
+      32  BRANCHIF 50
+      34  CHECK_SIGNALS
+      35  CONSTINT 30
+      37  PUSHACC3
+      38  APPLY1
+      39  CONST0
+      40  ACC1
+      41  PUSH
+      42  OFFSETINT 1
+      44  ASSIGN 2
+      46  ACC1
+      47  NEQ
+      48  BRANCHIF 34
+      50  CONST0
+      51  POP 2
+      53  ACC0
+      54  MAKEBLOCK1 0
+      56  POP 1
+      58  SETGLOBAL Fib
+## end of ocaml dump of "fib.cmo"

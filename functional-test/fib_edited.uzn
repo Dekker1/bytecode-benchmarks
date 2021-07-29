@@ -1,0 +1,33 @@
+predicate output_this(array [int] of var int: arr);
+@@@@@@@@@@
+:output_this:ROOT 1
+:f_fib_i:FUN 1
+IMMI 1 R1
+LEI R0 R1 R2
+JMPIF R2 l7
+SUBI R0 R1 R2
+CALL FUN f_fib_i 0 R2
+POP R3
+SUBI R2 R1 R2
+CALL FUN f_fib_i 0 R2
+POP R2
+ADDI R2 R3 R0
+l7:   PUSH R0
+RET
+:main:ROOT 0
+OPEN_AGGREGATION OTHER
+  IMMI 1 R0
+  IMMI 1000 R1
+  IMMI 23 R2
+  ITER_RANGE R0 R1 l2
+  l1:   ITER_NEXT R3
+  CALL FUN f_fib_i 0 R2
+  POP R3
+  JMP l1
+  l2: OPEN_AGGREGATION VEC
+    PUSH R3
+  CLOSE_AGGREGATION
+  POP R3
+  CALL ROOT output_this 1 R3
+  CLEAR R0 R3
+  RET
